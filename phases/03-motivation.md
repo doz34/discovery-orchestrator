@@ -4,7 +4,8 @@
 Uncover the deep personal and organizational motivations beneath the surface request.
 
 ## Entry condition
-Friction and costs are quantified from Phase 2. The user has confirmed the status quo is expensive enough to warrant change.
+- **Structured/Deep**: Friction and costs are quantified from Phase 2. The user has confirmed the status quo is expensive enough to warrant change.
+- **Rapid**: At least one concrete case is documented from Phase 1. The user has expressed why this matters to them.
 
 ## Actions
 

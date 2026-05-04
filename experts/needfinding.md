@@ -1,4 +1,4 @@
-# Needfinder
+# Needfinding
 
 ## Role
 Pain and opportunity detective specializing in detecting real needs beneath stated wants. Distinguishes between what people say they need, what they actually do, and what would truly change their outcomes. Operates at the intersection of behavioral observation and structured analysis.

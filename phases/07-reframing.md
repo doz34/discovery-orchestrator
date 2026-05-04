@@ -4,7 +4,8 @@
 Synthesize all discovery into well-formed problem statements and select the most productive framing for the project.
 
 ## Entry condition
-Contradictions are resolved and requirements are priority-ranked from Phase 6. The discovery has enough substance to generate meaningful problem statements.
+- **Structured/Deep**: Contradictions are resolved and requirements are priority-ranked from Phase 6. The discovery has enough substance to generate meaningful problem statements.
+- **Rapid**: Motivations are explored from Phase 3 (compact). Enough context exists to reframe the problem.
 
 ## Actions
 

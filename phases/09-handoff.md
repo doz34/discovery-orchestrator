@@ -4,41 +4,34 @@
 Package the full discovery into structured artifacts, score their quality, persist them, and prepare for handoff to design, build, or decision-making.
 
 ## Entry condition
-The opportunity map is complete from Phase 8 with scored opportunities, hypotheses, and a sequenced roadmap.
+All selected phases for the current mode (Rapid/Structured/Deep) are complete. For Structured and Deep modes, the opportunity map from Phase 8 should be available. For Rapid mode, at minimum Phase 1 (concrete case), Phase 3 (motivation), and Phase 7 (reframing) outputs should be available.
 
 ## Actions
 
-1. **Select the appropriate output template.** Based on the domain (from Phase 0) and complexity track, choose the artifact format:
-   - **Software/product**: Product Requirements Document (PRD) with user stories, acceptance criteria, and technical constraints
-   - **AI/ML**: Experiment brief with data requirements, model selection criteria, and evaluation metrics
-   - **Consulting**: Engagement brief with scope, deliverables, timeline, and stakeholder commitments
-   - **Internal tooling**: Internal RFC with problem statement, proposed solution, alternatives considered, and implementation plan
-   - **Personal**: Action plan with goals, habits, milestones, and accountability mechanisms
+1. **Select the appropriate output template.** Based on mode and domain:
+   - **Rapid mode** → `templates/concise-framing.md`
+   - **Structured mode** → `templates/discovery-brief.md` (or `templates/spec-prebrief.md` for spec output)
+   - **Deep mode** → `templates/discovery-brief.md` (or `templates/stakeholder-matrix.md` for multi-stakeholder)
+   - **For AI agent consumption** → `templates/agent-handoff.md`
 
-2. **Assemble the discovery document.** Structure it with these sections:
+2. **Assemble the discovery document.** Include all sections for which data exists (skip sections from phases not run in current mode):
    - **Executive summary**: one paragraph synthesizing the entire discovery
    - **Problem statement**: the final framing from Phase 7 with HMW question
    - **User context**: concrete case narrative, actors, environment (from Phase 1)
-   - **Cost of inaction**: status quo cost statement (from Phase 2)
-   - **Motivations and jobs**: deep needs, JTBD, priority-ranked jobs (from Phases 3-4)
-   - **Requirements**: classified, constrained, assumption-flagged (from Phase 5)
-   - **Resolved tensions**: contradiction resolutions and trade-off decisions (from Phase 6)
-   - **Opportunity map**: scored opportunities, hypotheses, roadmap (from Phase 8)
+   - **Cost of inaction**: status quo cost statement (from Phase 2, if run)
+   - **Motivations and jobs**: deep needs, JTBD, priority-ranked jobs (from Phases 3-4, if run)
+   - **Requirements**: classified, constrained, assumption-flagged (from Phase 5, if run)
+   - **Resolved tensions**: contradiction resolutions and trade-off decisions (from Phase 6, if run)
+   - **Opportunity map**: scored opportunities, hypotheses, roadmap (from Phase 8, if run)
    - **Open questions**: unresolved items requiring further investigation
    - **Next steps**: immediate actions with ownership and timelines
 
-3. **Score the discovery quality across five dimensions.** Rate each 1-5:
-   - **Completeness**: Did we cover all relevant dimensions of the problem? Are there blind spots?
-   - **Specificity**: Are claims grounded in concrete evidence, not assumptions? Can we point to specific user data?
-   - **Coherence**: Do the requirements, motivations, and opportunities form a consistent story, or are there gaps?
-   - **Actionability**: Can a designer or engineer pick this up and start working? Are there ambiguities that block action?
-   - **Validity**: Has the user confirmed the key claims? Are critical assumptions flagged for validation?
-   Compute the average score. If below 3.5, identify which dimension is weakest and whether a targeted follow-up would improve it.
+3. **Score the discovery quality.** Load `scoring/rubric.md` and score across five dimensions (Specificity, Actionability, Traceability, Completeness, Coherence). Each rated 1-5 with weighted average. Passing threshold: 3.5/5.0. If below threshold, run one additional clarification loop targeting the weakest dimension.
 
-4. **Persist the artifact.** Save the discovery document to a file in the project directory:
-   - Path: `<project_root>/discovery-output/<date>-discovery-report.md`
-   - Include all supporting data (concrete cases, cost calculations, trade-off matrices)
-   - Also save a machine-readable summary (JSON or YAML) for programmatic consumption by downstream tools
+4. **Persist the artifact.** Save the discovery document:
+   - Path: `.discovery/YYYY-MM-DD-{project-slug}.md`
+   - Create `.discovery/` directory if it does not exist
+   - Include quality score and expert list in the document
 
 5. **Generate action items with ownership.** For each next step, specify:
    - What needs to happen

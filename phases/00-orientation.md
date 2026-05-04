@@ -8,18 +8,18 @@ User has expressed an initial idea, problem, or project intent. No prior discove
 
 ## Actions
 
-1. **Parse the user's opening statement for domain signals.** Look for keywords and context clues that map to one of six domain categories:
-   - **Software**: mentions code, app, platform, API, database, deployment, feature, bug
-   - **Product**: mentions users, market, roadmap, competitor, launch, adoption, retention
-   - **AI/ML**: mentions model, training, inference, dataset, prompt, embedding, agent
-   - **Consulting**: mentions client, engagement, deliverable, stakeholder, proposal, SOW
-   - **Internal tooling**: mentions team, workflow, process, automation, internal, ops
-   - **Personal**: mentions habit, learning, health, finance, career, side project
+1. **Parse the user's opening statement for domain signals.** Look for keywords and context clues that map to one of six domain categories. Load the corresponding `adapters/{domain}.md` file:
+   - **software** (`adapters/software.md`): code, repo, API, database, deploy, feature, bug, refactor
+   - **product-ux** (`adapters/product-ux.md`): users, UX, SaaS, conversion, retention, personas, churn
+   - **ai-projects** (`adapters/ai-projects.md`): model, LLM, agent, prompt, RAG, fine-tune, embedding
+   - **consulting** (`adapters/consulting.md`): client, stakeholder, business problem, diagnostic, proposal
+   - **internal-tools** (`adapters/internal-tools.md`): team, process, workflow, automation, ops, compliance
+   - **personal** (`adapters/personal.md`): should I, career, decision, life, feel stuck, considering
 
 2. **Assess complexity from the initial input.** Classify into one of three tracks:
-   - **Rapid** (single stakeholder, clear problem, bounded scope, < 2 weeks horizon): skip to Phase 5 after a compressed Phase 1-2
-   - **Structured** (multiple stakeholders, moderate ambiguity, cross-functional, 2-8 weeks): run all phases sequentially
-   - **Deep** (organizational change, strategic pivot, high uncertainty, > 8 weeks): run all phases with iterative loops on Phases 2-4
+   - **Rapid** (single stakeholder, clear problem, bounded scope, quick validation): route P1→P3(compact)→P7→P9 with 2 experts (needfinding + decision-analyst)
+   - **Structured** (multiple stakeholders, moderate ambiguity, cross-functional): route P1→P2→P3→P4→P5→P6→P7→P8→P9 with 4 experts (needfinding + jtbd + requirements + systems-advisor)
+   - **Deep** (organizational change, strategic pivot, high uncertainty, multi-stakeholder): all phases with all 9 experts in up to 3 waves
 
 3. **Confirm domain and complexity with the user.** State what you detected and ask for correction before proceeding. Example: "I'm hearing a software project with a product dimension. The scope looks structured — multiple stakeholders, moderate ambiguity. Sound right?"
 
