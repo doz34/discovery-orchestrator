@@ -18,7 +18,7 @@ User has expressed an initial idea, problem, or project intent. No prior discove
 
 2. **Assess complexity from the initial input.** Classify into one of three tracks:
    - **Rapid** (single stakeholder, clear problem, bounded scope, quick validation): route P1→P3(compact)→P7→P9 with 2 experts (needfinding + decision-analyst)
-   - **Structured** (multiple stakeholders, moderate ambiguity, cross-functional): route P1→P2→P3→P4→P5→P6→P7→P8→P9 with 4 experts (needfinding + jtbd + requirements + systems-advisor)
+   - **Structured** (multiple stakeholders, moderate ambiguity, cross-functional): route P1→P2→P3→P4→P5→P6→P7→P8→P9 with 5 experts (needfinding + jtbd + requirements + product-researcher + systems-advisor)
    - **Deep** (organizational change, strategic pivot, high uncertainty, multi-stakeholder): all phases with all 9 experts in up to 3 waves
 
 3. **Confirm domain and complexity with the user.** State what you detected and ask for correction before proceeding. Example: "I'm hearing a software project with a product dimension. The scope looks structured — multiple stakeholders, moderate ambiguity. Sound right?"

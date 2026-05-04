@@ -103,7 +103,7 @@ Load phase files only when needed: `phases/{NN}-{name}.md`
 4. Load scoring rubric: `scoring/rubric.md`
 5. Score quality on 5 dimensions
 6. If score < 3.5/5.0: one additional clarification loop
-7. Create `.discovery/` directory if needed, then save artifact to `.discovery/YYYY-MM-DD-{slug}.md`
+7. Create `.discovery/` directory if needed, then save artifact to `.discovery/YYYY-MM-DD-{project-slug}.md`
 
 ### Quality Gates
 
