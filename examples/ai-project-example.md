@@ -56,7 +56,7 @@
 
 ## Phase 3-6: Expert Analysis (Parallel, 3 waves of 3)
 
-### Wave 1: Needfinding, JTBD, Facilitator
+### Wave 1: Needfinding, Psychologist, Facilitator
 
 **Needfinder** identified 4 pain signals:
 - Type 2 (Workaround): Manual diff reading for logic that spans files
@@ -64,31 +64,33 @@
 - Type 4 (Avoidance): Team skips reviewing migration logic — "not worth the hassle"
 - Type 1 (Friction): Reviewers context-switch between files to trace call chains
 
+**Psychologist** identified 2 cognitive biases:
+- **Automation bias risk**: Reviewers may over-trust AI output and reduce own scrutiny
+- **Anchoring**: First impression of PR (author reputation, PR size) anchors review depth
+- **Assumption flagged**: User assumes AI can reason about business logic — this is unvalidated and high-risk
+
+**Facilitator** noted: Participant shows high engagement on incident narrative — energy peak. Slight trough when discussing prior AI tool attempts (resignation language: "nothing helps"). Recommend: anchor future questions in specific review sessions, not abstract tool desires.
+
+### Wave 2: JTBD, Requirements, MI Coach
+
 **JTBD Analyst** framed the core job:
 > **When** I receive a PR that spans multiple concerns and files, **I want to** understand the business logic implications without manually tracing every call chain, **so I can** approve with genuine confidence rather than author trust.
 
 Forces: Strong push (production incident), strong pull (clear AI opportunity), moderate anxiety (will AI understand context?), strong habit (manual reading feels thorough).
-
-**Facilitator** noted: Participant shows high engagement on incident narrative — energy peak. Slight trough when discussing prior AI tool attempts (resignation language: "nothing helps"). Recommend: anchor future questions in specific review sessions, not abstract tool desires.
-
-### Wave 2: Requirements, Product Researcher, Psychologist
 
 **Requirements Analyst** flagged 3 critical constraints:
 - Must integrate with GitHub (team won't adopt a separate tool)
 - Must handle multi-file reasoning (single-file analysis already exists)
 - Must distinguish "I can't tell" from "this looks correct" (confidence calibration)
 
+**MI Coach** noted motivational ambivalence: User is excited about the vision but resigned about AI tools in general ("nothing helps with the hard part"). Suggests they may undervalue incremental solutions that don't solve everything.
+
+### Wave 3: Product Researcher, Systems Advisor, Decision Analyst
+
 **Product Researcher** generated 5 How-Might-We questions:
 - HMW surface cross-file logic dependencies automatically during review?
 - HMW help reviewers ask the right questions instead of giving answers?
 - HMW make migration safety visible without running the migration?
-
-**Psychologist** identified 2 cognitive biases:
-- **Automation bias risk**: Reviewers may over-trust AI output and reduce own scrutiny
-- **Anchoring**: First impression of PR (author reputation, PR size) anchors review depth
-- **Assumption flagged**: User assumes AI can reason about business logic — this is unvalidated and high-risk
-
-### Wave 3: Systems Advisor, MI Coach, Decision Analyst
 
 **Systems Advisor** warned:
 - "Business logic reasoning" requires project-specific context (domain models, conventions, error handling patterns). This is the hardest possible NLP problem for code. Consider narrowing to detectable categories first (migration safety, auth boundary changes, API contract violations).
@@ -97,8 +99,6 @@ Forces: Strong push (production incident), strong pull (clear AI opportunity), m
 
 **Decision Analyst** surfaced a contradiction:
 - User says "I want it to actually help" but also "I approved based on trust" — these point in different directions. Is the goal to *supplement* human judgment or *replace* it for certain checks? This changes the entire product direction.
-
-**MI Coach** noted motivational ambivalence: User is excited about the vision but resigned about AI tools in general ("nothing helps with the hard part"). Suggests they may undervalue incremental solutions that don't solve everything.
 
 ---
 
@@ -148,7 +148,7 @@ Forces: Strong push (production incident), strong pull (clear AI opportunity), m
 | Specificity | 4.5 | Strong concrete anchor (Thursday's PR), measurable costs (90 min, 3hr incident) |
 | Traceability | 4.0 | Most claims traced to specific user statements; 2 expert inferences clearly flagged |
 | Actionability | 4.0 | Clear first scope (migration safety), but UI and integration details undefined |
-| Contradiction handling | 3.5 | Core tension surfaced and partially resolved; automation bias risk acknowledged but not mitigated |
+| Coherence | 3.5 | Core tension surfaced and partially resolved; automation bias risk acknowledged but not mitigated |
 | Completeness | 4.5 | Full JTBD decomposition, forces analysis, phased delivery plan, open questions documented |
 
 **Why not higher**: The "business logic reasoning" assumption was challenged but the fallback (attention direction) still depends on multi-file code understanding that remains technically unvalidated. The brief would benefit from a spike or proof-of-concept before commitment.

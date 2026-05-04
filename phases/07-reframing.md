@@ -9,7 +9,9 @@ Synthesize all discovery into well-formed problem statements and select the most
 
 ## Actions
 
-1. **Generate the initial problem statement.** Using the full discovery output (domain, concrete case, friction, motivation, JTBD, requirements), write a plain-language problem statement: "[User/stakeholder] needs a way to [solve problem] because [root cause], but [key constraint] prevents them from [desired outcome]."
+1. **Generate the initial problem statement.** Using the available discovery output, write a plain-language problem statement:
+   - **Structured/Deep**: "[User/stakeholder] needs a way to [solve problem] because [root cause], but [key constraint] prevents them from [desired outcome]."
+   - **Rapid**: "[User] needs a way to [solve problem] because [motivation from Phase 3], but [any mentioned constraint] prevents them from [desired outcome]." Use only data from P1 (concrete case) and P3 (motivation).
 
 2. **Create "How Might We" (HMW) questions.** Generate at least five HMW statements from different angles:
    - **User-centric**: "How might we help [user] achieve [outcome] without [friction]?"
@@ -29,10 +31,11 @@ Synthesize all discovery into well-formed problem statements and select the most
 4. **Evaluate each framing for productivity.** A productive framing is one that:
    - Opens up solution space (many possible approaches)
    - Aligns with the deep motivations from Phase 3
-   - Respects hard constraints from Phase 5
-   - Resolves (or sidesteps) contradictions from Phase 6
+   - **Structured/Deep only**: Respects hard constraints from Phase 5
+   - **Structured/Deep only**: Resolves (or sidesteps) contradictions from Phase 6
+   - **Rapid**: Respects any constraints mentioned during conversation
    - Is actionable within the project's scope and timeline
-   Score each framing on these five criteria (high/medium/low).
+   Score each framing on the applicable criteria (high/medium/low).
 
 5. **Reframe from stakeholder perspectives.** Take the top 2-3 stakeholders and write the problem statement from their point of view. The user, their boss, their client, their team — each sees a different problem in the same situation. These perspectives often reveal blind spots.
 

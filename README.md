@@ -74,7 +74,7 @@ The skill uses **lazy loading** — only the phases and experts needed for your 
 | Mode | When | Route | Experts |
 |------|------|-------|---------|
 | **Rapid** | Already clear, want quick validation | P1→P3→P7→P9 | 2 |
-| **Structured** | Real problem, needs framing | P1→P2→...→P9 | 4 |
+| **Structured** | Real problem, needs framing | P1→P2→...→P9 | 5 |
 | **Deep** | Ambiguous, strategic, emotional | Full + all phases | 9 |
 
 ## Domains
@@ -128,7 +128,7 @@ Create `templates/your-template.md`. Reference it in Phase 9 handoff.
 
 ```
 discovery-orchestrator/
-├── SKILL.md              # Orchestrator (~120 lines, always loaded)
+├── SKILL.md              # Orchestrator (~140 lines, always loaded)
 ├── experts/              # 9 expert agents (loaded on demand)
 ├── phases/               # 10 phases (loaded per route)
 ├── adapters/             # 6 domain adapters
@@ -143,7 +143,7 @@ discovery-orchestrator/
 
 | Metric | v1 | v2 |
 |--------|----|----|
-| Files | 1 monolith | ~25 modular |
+| Files | 1 monolith | ~40 modular |
 | Expert depth | ~15 lines/role | 80-150 lines/agent |
 | Real agents | 0 | 3-9 parallel |
 | Tokens/load | 15-20K | 3-6K (lazy) |

@@ -112,7 +112,7 @@ The real decision isn't Rust vs. Go. It's: do you want to optimize for the pipel
 | Specificity | 4.0 | Concrete trigger (45min pipeline), concrete constraint (Python dev, 4yr exp) |
 | Traceability | 4.0 | Recommendation directly traceable to stated needs; colleague suggestions identified as external influence, not user need |
 | Actionability | 4.5 | One-weekend test with clear success criteria; binary decision tree |
-| Contradiction handling | 3.5 | Two underlying jobs surfaced (pipeline vs career), resolved by finding overlap (Rust+PyO3). But career market analysis is shallow — a deeper session would pull actual job data. |
+| Coherence | 3.5 | Two underlying jobs surfaced (pipeline vs career), resolved by finding overlap (Rust+PyO3). But career market analysis is shallow — a deeper session would pull actual job data. |
 | Completeness | 3.0 | Rapid mode limits depth. No analysis of team dynamics, long-term project roadmap, or learning style fit. Emotional dimension ("feel limited") noted but not deeply explored. |
 
 **Why not higher**: This is a solid rapid framing, not a comprehensive decision analysis. The career market claims are based on general knowledge, not 2026-specific data. The emotional dimension (feeling "limited" as a Python dev) deserves deeper exploration — it may be the actual driver, with the pipeline as a convenient rationalization. A Structured or Deep session would catch that.

@@ -48,4 +48,19 @@
 
 ---
 
+## Quality Score
+
+| Dimension | Score | Notes |
+|-----------|-------|-------|
+| Specificity (0.25) | [1-5] | [evidence] |
+| Actionability (0.25) | [1-5] | [evidence] |
+| Traceability (0.20) | [1-5] | [evidence] |
+| Completeness (0.15) | [1-5] | [evidence] |
+| Coherence (0.15) | [1-5] | [evidence] |
+| **Weighted Total** | **[X.X]/5.0** | Pass threshold: 3.5 |
+
+Mode: Rapid | Domain: [detected]
+
+---
+
 > Rapid framing — for full analysis, run in Default mode.

@@ -1,7 +1,7 @@
 # Example Session: Structured Mode Discovery — SaaS Onboarding Drop-off
 
 > **Mode**: Structured | **Domain**: product-ux | **Date**: 2026-01-18
-> **Duration**: ~40 minutes | **Route**: P1-P9 (4 expert agents)
+> **Duration**: ~40 minutes | **Route**: P1-P9 (5 expert agents)
 
 ---
 
@@ -14,7 +14,7 @@
 - Complexity: `Structured` (clear metric, real problem, under-explored root cause)
 - Key tension: multiple attempted solutions, none effective — suggests problem misdiagnosis
 
-**Orchestrator**: "This looks like a product/UX problem with a clear metric (60% drop-off) but an unclear root cause — you've tried solutions without improvement, which usually means the underlying need isn't what you think it is. I'll run a structured discovery with 4 expert perspectives (needfinding, JTBD, requirements, systems). Does that framing work?"
+**Orchestrator**: "This looks like a product/UX problem with a clear metric (60% drop-off) but an unclear root cause — you've tried solutions without improvement, which usually means the underlying need isn't what you think it is. I'll run a structured discovery with 5 expert perspectives (needfinding, JTBD, requirements, product research, systems). Does that framing work?"
 
 **User**: "Yes. Honestly I'm not even sure what questions to ask anymore."
 
@@ -53,7 +53,7 @@
 
 ---
 
-## Phase 3-4: Expert Analysis (Parallel, 4 agents)
+## Phase 3-4: Expert Analysis (Parallel, 5 agents)
 
 ### Needfinder
 
@@ -95,6 +95,21 @@
 
 **Gap identified**: No requirement currently addresses value demonstration before integration.
 
+### Product Researcher
+
+**Opportunity scoring**:
+
+| Opportunity | Impact | Uncertainty | Quadrant |
+|------------|--------|-------------|----------|
+| Value-first onboarding (show value before integration) | 5 | 2 | Execute |
+| Integration recommendation engine | 4 | 4 | Research |
+| Recovery mechanism for drop-offs | 3 | 2 | Execute |
+| Redesigned integration selection | 3 | 3 | Research |
+
+**HMW question**: How might we let users experience the product's core value before asking them to connect anything?
+
+**Key hypothesis**: We believe that showing a pre-populated demo workspace will reduce onboarding drop-off by 40%, because users will understand the value before being asked for effort.
+
 ### Systems Advisor
 
 **Technical observations**:
@@ -104,7 +119,7 @@
 
 ---
 
-## Phase 5: Motivation & Contradictions
+## Phase 5: Requirements & Contradictions
 
 **Orchestrator**: "I want to surface something. You said the survey responses felt like 'polite non-answers.' That instinct is worth trusting. When 14 out of 23 people say 'didn't have time,' that usually means 'didn't see enough value to make time.' Has anyone on your team actually watched a new user go through onboarding in real-time?"
 
@@ -163,7 +178,7 @@
 | Specificity | 4.5 | Exact funnel numbers, specific drop-off point, 3 prior solutions documented |
 | Traceability | 4.5 | Every claim traced to data (Mixpanel) or user statement; expert inferences flagged as hypotheses |
 | Actionability | 4.5 | 4 concrete next steps, each testable; clear validation criteria (watch 5 users) |
-| Contradiction handling | 4.0 | Core contradiction surfaced (optimizing wrong step); resolution path proposed but not validated |
+| Coherence | 4.0 | Core contradiction surfaced (optimizing wrong step); resolution path proposed but not validated |
 | Completeness | 4.5 | Full JTBD + forces analysis, latent need identified, systems constraints noted |
 
 **Why not higher**: The root cause (value-before-effort) is a strong hypothesis but remains unvalidated. The brief correctly prescribes observation before design, but the recommended next step is a research activity, not a product change. This is appropriate — the score reflects that the discovery did its job by identifying that more discovery is needed before building.
