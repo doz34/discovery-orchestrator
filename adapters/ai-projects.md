@@ -45,7 +45,7 @@
 | Stakeholder | Model provider, annotator, reviewer, end user, compliance |
 | Risk | Prompt injection, data leakage, model deprecation, bias amplification |
 | Milestone | Eval threshold met, golden dataset passing, latency SLA achieved |
-| Success metric | Faithfulness, relevance, BLEU/ROUGE, human preference, cost/query |
+| Success metric | Faithfulness, relevance, human preference, latency, cost/query |
 | Scope | Model scope, task scope, language scope, domain scope |
 
 ## Output transformation

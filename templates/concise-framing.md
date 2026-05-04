@@ -63,4 +63,4 @@ Mode: Rapid | Domain: [detected]
 
 ---
 
-> Rapid framing — for full analysis, run in Default mode.
+> Rapid framing — for full analysis, run in Structured or Deep mode.

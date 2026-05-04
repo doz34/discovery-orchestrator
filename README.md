@@ -12,7 +12,7 @@ Discovery Orchestrator helps you frame problems before jumping to solutions. It 
 | Expert | Perspective |
 |--------|------------|
 | Facilitator | Pacing, flow, cognitive load |
-| Needfinder | Pain signals, workarounds, latent needs |
+| Needfinding | Pain signals, workarounds, latent needs |
 | JTBD Analyst | Jobs To Be Done — functional, emotional, social |
 | Requirements Eng | Constraints, assumptions, scope boundaries |
 | Product Researcher | Opportunity scoring, HMW questions, hypotheses |
@@ -143,8 +143,8 @@ discovery-orchestrator/
 
 | Metric | v1 | v2 |
 |--------|----|----|
-| Files | 1 monolith | ~40 modular |
-| Expert depth | ~15 lines/role | 80-150 lines/agent |
+| Files | 1 monolith | 39 modular |
+| Expert depth | ~15 lines/role | 120-250 lines/agent |
 | Real agents | 0 | 3-9 parallel |
 | Tokens/load | 15-20K | 3-6K (lazy) |
 | Quality gate | None | 5D rubric |

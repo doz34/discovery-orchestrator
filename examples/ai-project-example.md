@@ -58,7 +58,7 @@
 
 ### Wave 1: Needfinding, Psychologist, Facilitator
 
-**Needfinder** identified 4 pain signals:
+**Needfinding** identified 4 pain signals:
 - Type 2 (Workaround): Manual diff reading for logic that spans files
 - Type 3 (Cost): ~6 hours/week spent on reviews with low confidence outcome
 - Type 4 (Avoidance): Team skips reviewing migration logic — "not worth the hassle"
@@ -71,7 +71,7 @@
 
 **Facilitator** noted: Participant shows high engagement on incident narrative — energy peak. Slight trough when discussing prior AI tool attempts (resignation language: "nothing helps"). Recommend: anchor future questions in specific review sessions, not abstract tool desires.
 
-### Wave 2: JTBD, Requirements, MI Coach
+### Wave 2: JTBD Analyst, Requirements Analyst, MI Coach
 
 **JTBD Analyst** framed the core job:
 > **When** I receive a PR that spans multiple concerns and files, **I want to** understand the business logic implications without manually tracing every call chain, **so I can** approve with genuine confidence rather than author trust.
@@ -146,10 +146,10 @@ Forces: Strong push (production incident), strong pull (clear AI opportunity), m
 | Dimension | Score | Notes |
 |-----------|-------|-------|
 | Specificity | 4.5 | Strong concrete anchor (Thursday's PR), measurable costs (90 min, 3hr incident) |
-| Traceability | 4.0 | Most claims traced to specific user statements; 2 expert inferences clearly flagged |
 | Actionability | 4.0 | Clear first scope (migration safety), but UI and integration details undefined |
-| Coherence | 3.5 | Core tension surfaced and partially resolved; automation bias risk acknowledged but not mitigated |
+| Traceability | 4.0 | Most claims traced to specific user statements; 2 expert inferences clearly flagged |
 | Completeness | 4.5 | Full JTBD decomposition, forces analysis, phased delivery plan, open questions documented |
+| Coherence | 3.5 | Core tension surfaced and partially resolved; automation bias risk acknowledged but not mitigated |
 
 **Why not higher**: The "business logic reasoning" assumption was challenged but the fallback (attention direction) still depends on multi-file code understanding that remains technically unvalidated. The brief would benefit from a spike or proof-of-concept before commitment.
 

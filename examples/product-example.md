@@ -55,7 +55,7 @@
 
 ## Phase 3-4: Expert Analysis (Parallel, 5 agents)
 
-### Needfinder
+### Needfinding
 
 **Pain signals detected**:
 
@@ -176,10 +176,10 @@
 | Dimension | Score | Notes |
 |-----------|-------|-------|
 | Specificity | 4.5 | Exact funnel numbers, specific drop-off point, 3 prior solutions documented |
-| Traceability | 4.5 | Every claim traced to data (Mixpanel) or user statement; expert inferences flagged as hypotheses |
 | Actionability | 4.5 | 4 concrete next steps, each testable; clear validation criteria (watch 5 users) |
-| Coherence | 4.0 | Core contradiction surfaced (optimizing wrong step); resolution path proposed but not validated |
+| Traceability | 4.5 | Every claim traced to data (Mixpanel) or user statement; expert inferences flagged as hypotheses |
 | Completeness | 4.5 | Full JTBD + forces analysis, latent need identified, systems constraints noted |
+| Coherence | 4.0 | Core contradiction surfaced (optimizing wrong step); resolution path proposed but not validated |
 
 **Why not higher**: The root cause (value-before-effort) is a strong hypothesis but remains unvalidated. The brief correctly prescribes observation before design, but the recommended next step is a research activity, not a product change. This is appropriate — the score reflects that the discovery did its job by identifying that more discovery is needed before building.
 

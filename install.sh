@@ -1,5 +1,5 @@
 #!/bin/bash
-# Discovery Orchestrator v2.0 — Installer for Claude Code
+# Discovery Orchestrator v2.0.3 — Installer for Claude Code
 # Zero dependencies. Only requires Claude Code CLI.
 
 set -e
@@ -7,7 +7,7 @@ set -e
 SKILLS_DIR="$HOME/.claude/skills"
 TARGET="$SKILLS_DIR/discovery-orchestrator"
 
-echo "Discovery Orchestrator v2.0 — Installer"
+echo "Discovery Orchestrator v2.0.3 — Installer"
 echo "========================================="
 
 # Check Claude Code skills directory

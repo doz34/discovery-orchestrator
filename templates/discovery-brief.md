@@ -1,6 +1,6 @@
 # Discovery Brief
 
-> Mode: Default | Generated: [date] | Version: [1.0]
+> Mode: Structured | Deep | Generated: [date] | Version: [1.0]
 
 ---
 
@@ -130,14 +130,16 @@
 
 ## Quality Score
 
-| Dimension | Score (1-5) | Notes |
-|-----------|-------------|-------|
-| Specificity | [score] | [Justification] |
-| Actionability | [score] | [Justification] |
-| Traceability | [score] | [Justification] |
-| Completeness | [score] | [Justification] |
-| Coherence | [score] | [Justification] |
+| Dimension | Score | Notes |
+|-----------|-------|-------|
+| Specificity (0.25) | [1-5] | [evidence] |
+| Actionability (0.25) | [1-5] | [evidence] |
+| Traceability (0.20) | [1-5] | [evidence] |
+| Completeness (0.15) | [1-5] | [evidence] |
+| Coherence (0.15) | [1-5] | [evidence] |
 | **Weighted Total** | **[X.X]/5.0** | Pass threshold: 3.5 |
+
+Mode: Structured | Deep | Domain: [detected]
 
 ---
 
