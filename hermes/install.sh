@@ -42,6 +42,11 @@ done
 # Copy license if present
 [ -f "$PROJECT_ROOT/LICENSE" ] && cp "$PROJECT_ROOT/LICENSE" "$TARGET/LICENSE"
 
+# Clean up non-skill files from target
+rm -rf "$TARGET/.git"
+rm -rf "$TARGET/hermes"
+rm -f "$TARGET/install.sh"
+
 # Verify
 if [ -f "$TARGET/SKILL.md" ]; then
     echo ""

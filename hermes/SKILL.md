@@ -4,7 +4,7 @@ description: >
   Multi-expert discovery, needfinding, and requirements framing.
   Transforms fuzzy ideas into decision-ready artifacts using parallel
   expert agents. Works for any domain: software, product, AI, consulting,
-  personal decisions. Zero dependencies — native Hermes skill.
+  personal decisions. Requires Hermes Agent with delegate tool.
 metadata:
   hermes:
     tags:

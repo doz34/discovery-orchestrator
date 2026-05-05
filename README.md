@@ -80,10 +80,14 @@ Or just start describing your situation — the skill auto-detects domain and co
 
 ### Examples
 
+**Claude Code:**
 ```
 /discovery-orchestrator Our team spends 3 hours/week on manual report generation
-/discovery-orchestrator I'm considering switching from React to Vue
-/discovery-orchestrator We need to redesign our onboarding flow — churn is 40% in first month
+```
+
+**Hermes Agent:**
+```
+discovery-orchestrator Our team spends 3 hours/week on manual report generation
 ```
 
 ## How It Works
@@ -177,7 +181,7 @@ discovery-orchestrator/
 
 | Metric | v1 | v2 |
 |--------|----|----|
-| Files | 1 monolith | 39 modular |
+| Files | 1 monolith | 41+ modular |
 | Expert depth | ~15 lines/role | 120-250 lines/agent |
 | Real agents | 0 | 3-9 parallel |
 | Tokens/load | 15-20K | 3-6K (lazy) |
