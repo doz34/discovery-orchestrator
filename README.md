@@ -1,6 +1,6 @@
 # Discovery Orchestrator
 
-> Multi-expert discovery & needfinding skill for Claude Code.
+> Multi-expert discovery & needfinding skill for Claude Code & Hermes Agent.
 > Transforms fuzzy ideas into decision-ready artifacts using parallel expert agents.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -21,9 +21,11 @@ Discovery Orchestrator helps you frame problems before jumping to solutions. It 
 | Systems Advisor | Feasibility, dependencies, risk |
 | Decision Analyst | Trade-offs, prioritization, reversibility |
 
-**Zero dependencies** — only requires Claude Code CLI. No Python, no MCP servers, no plugins.
+**Zero dependencies** — works with Claude Code CLI or Hermes Agent. No Python, no MCP servers, no plugins.
 
 ## Installation
+
+### Claude Code (default)
 
 ```bash
 git clone https://github.com/doz34/discovery-orchestrator.git
@@ -38,14 +40,43 @@ git clone https://github.com/doz34/discovery-orchestrator.git
 cp -r discovery-orchestrator ~/.claude/skills/discovery-orchestrator
 ```
 
+### Hermes Agent
+
+```bash
+git clone https://github.com/doz34/discovery-orchestrator.git
+cd discovery-orchestrator/hermes
+chmod +x install.sh
+./install.sh
+```
+
+Or manually:
+```bash
+git clone https://github.com/doz34/discovery-orchestrator.git
+# Copy shared content + Hermes SKILL.md
+mkdir -p ~/.hermes/skills/discovery-orchestrator
+cp discovery-orchestrator/hermes/SKILL.md ~/.hermes/skills/discovery-orchestrator/
+for dir in experts phases adapters templates scoring examples; do
+  cp -r discovery-orchestrator/$dir ~/.hermes/skills/discovery-orchestrator/$dir
+done
+```
+
 ## Usage
 
-In Claude Code, type:
+### Claude Code
+
+Type:
 ```
 /discovery-orchestrator I want to build a RAG system for legal documents
 ```
 
-Or just start describing your situation — the skill auto-detects domain and complexity.
+### Hermes Agent
+
+Invoke:
+```
+discovery-orchestrator I want to build a RAG system for legal documents
+```
+
+Or just start describing your situation — the skill auto-detects domain and complexity on both platforms.
 
 ### Examples
 
@@ -60,7 +91,7 @@ Or just start describing your situation — the skill auto-detects domain and co
 ```
 Input → Phase 0: Orientation (domain + complexity detection)
       → Phase 1-2: Conversation (concrete case + friction mapping)
-      → Phase 3+: Parallel expert agents (spawned via Agent tool)
+      → Phase 3+: Parallel expert agents (spawned via Agent/delegate tool)
       → Synthesis + Quality scoring (5-dimension rubric)
       → Output artifact (saved to .discovery/)
 ```
@@ -128,14 +159,17 @@ Create `templates/your-template.md`. Reference it in Phase 9 handoff.
 
 ```
 discovery-orchestrator/
-├── SKILL.md              # Orchestrator (~140 lines, always loaded)
-├── experts/              # 9 expert agents (loaded on demand)
-├── phases/               # 10 phases (loaded per route)
-├── adapters/             # 6 domain adapters
-├── templates/            # 5 output templates
-├── scoring/              # Quality rubric
+├── SKILL.md              # Claude Code orchestrator (~140 lines, always loaded)
+├── hermes/
+│   ├── SKILL.md          # Hermes Agent orchestrator (native delegate tool)
+│   └── install.sh        # Hermes installer
+├── experts/              # 9 expert agents (loaded on demand, shared)
+├── phases/               # 10 phases (loaded per route, shared)
+├── adapters/             # 6 domain adapters (shared)
+├── templates/            # 5 output templates (shared)
+├── scoring/              # Quality rubric (shared)
 ├── examples/             # Example sessions
-├── install.sh            # One-command installer
+├── install.sh            # Claude Code installer
 └── LICENSE               # MIT
 ```
 
